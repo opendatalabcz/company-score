@@ -1,19 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779e93d2-222d-4b13-b4d1-a612c0dfc942" name="Default Changelist" comment="" />
+    <list default="true" id="779e93d2-222d-4b13-b4d1-a612c0dfc942" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Scrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/124758e4-dfba-4ec0-a0cb-59a976227505.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scappers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scappers.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Firm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Firm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firms.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/firms.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whois.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Tests/ClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Tests/ClientTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/README.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/build-phar.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey.asc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/other/build_phar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/psalm-autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/psalm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Client.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Cookie.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/Cookie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/CookieJar.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/CookieJar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Tests/ClientTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Tests/CookieJarTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Tests/CookieTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Tests/HistoryTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Tests/RequestTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Tests/ResponseTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/CssSelectorConverter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/CssSelectorConverter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Exception/ExceptionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Exception/ExceptionInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Exception/SyntaxErrorException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Exception/SyntaxErrorException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/AbstractNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/AbstractNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/AttributeNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/AttributeNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/ClassNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/ClassNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/CombinedSelectorNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/CombinedSelectorNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/ElementNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/ElementNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/FunctionNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/FunctionNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/HashNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/HashNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/NegationNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/NegationNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/NodeInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/NodeInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/PseudoNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/PseudoNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/SelectorNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/SelectorNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/Specificity.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Node/Specificity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/CommentHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/CommentHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/HandlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/HandlerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/HashHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/HashHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/IdentifierHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/IdentifierHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/NumberHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/NumberHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/StringHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/StringHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/WhitespaceHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Handler/WhitespaceHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Parser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Parser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/ParserInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/ParserInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Reader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Reader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/ClassParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/ClassParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/ElementParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/ElementParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/EmptyStringParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/EmptyStringParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/HashParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Shortcut/HashParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Token.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/TokenStream.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/TokenStream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Tokenizer/Tokenizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Tokenizer/Tokenizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Tokenizer/TokenizerEscaping.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Tokenizer/TokenizerEscaping.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Tokenizer/TokenizerPatterns.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Tokenizer/TokenizerPatterns.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/CssSelectorConverterTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/AbstractNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/AttributeNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/ClassNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/CombinedSelectorNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/ElementNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/FunctionNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/HashNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/NegationNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/PseudoNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/SelectorNodeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Node/SpecificityTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Handler/AbstractHandlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Handler/CommentHandlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Handler/HashHandlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Handler/IdentifierHandlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Handler/NumberHandlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Handler/StringHandlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Handler/WhitespaceHandlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/ParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/ReaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Shortcut/ClassParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Shortcut/ElementParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Shortcut/EmptyStringParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/Shortcut/HashParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/TokenStreamTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/XPath/Fixtures/ids.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/XPath/Fixtures/lang.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/XPath/Fixtures/shakespear.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/XPath/TranslatorTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/AbstractExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/AbstractExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/AttributeMatchingExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/AttributeMatchingExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/CombinationExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/CombinationExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/ExtensionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/ExtensionInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/FunctionExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/FunctionExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/HtmlExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/HtmlExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/NodeExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/NodeExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/PseudoClassExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/PseudoClassExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Translator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Translator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/TranslatorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/TranslatorInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/XPathExpr.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/XPathExpr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/AbstractUriElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/AbstractUriElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Crawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Crawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Field/ChoiceFormField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Field/ChoiceFormField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Field/FileFormField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Field/FileFormField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Field/FormField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Field/FormField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/FormFieldRegistry.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/FormFieldRegistry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/CrawlerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Field/ChoiceFormFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Field/FileFormFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Field/FormFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Field/FormFieldTestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Field/InputFormFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Field/TextareaFormFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Fixtures/no-extension" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/Fixtures/windows-1250.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/FormTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/ImageTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/LinkTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/Idn.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/Idn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/Resources/unidata/Regex.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/Resources/unidata/Regex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/Normalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/Normalizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/mb_convert_variables.php8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Php70.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/AssertionError.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/Error.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/ParseError.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/TypeError.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php70/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/Php72.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/Php72.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/composer.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
@@ -28,8 +224,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
     </include_path>
   </component>
   <component name="ProjectId" id="1q1XucjCMuuzGWWN8CpKTL8JSOi" />
@@ -38,19 +234,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Кирил\PhpstormProjects\scappers\src" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Кирил\PhpstormProjects\scappers" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\Users\Кирил\PhpstormProjects\scappers\src" />
       <recent name="C:\Users\Кирил\PhpstormProjects\scappers" />
     </key>
   </component>
@@ -64,36 +265,37 @@
       <updated>1616248293319</updated>
       <workItem from="1616248294459" duration="77567000" />
       <workItem from="1616446116792" duration="1502000" />
+      <workItem from="1616448468009" duration="7321000" />
+      <workItem from="1616486289223" duration="3780000" />
+      <workItem from="1616497674931" duration="12968000" />
+      <workItem from="1616514031897" duration="14737000" />
+      <workItem from="1616529739264" duration="16146000" />
+      <workItem from="1616609442276" duration="11559000" />
+      <workItem from="1616681420784" duration="690000" />
+      <workItem from="1616842071796" duration="4424000" />
+      <workItem from="1616848573225" duration="17206000" />
+      <workItem from="1616867147421" duration="6243000" />
+      <workItem from="1616927714033" duration="20362000" />
+      <workItem from="1616948859254" duration="2603000" />
+      <workItem from="1616953003410" duration="6892000" />
+      <workItem from="1617013919373" duration="19882000" />
+      <workItem from="1617034655592" duration="12194000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616443939469">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1616443939469" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1616445006868">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1616445006868" />
-    <state x="549" y="139" key="FileChooserDialogImpl" timestamp="1616443931493">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="139" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1616443931493" />
-    <state x="561" y="135" key="NewPhpClassDialog" timestamp="1616443976615">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="561" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1616443976615" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1616444795819">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1616444795819" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1616440970639">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1616440970639" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -33,10 +33,15 @@ class Request
      * @param array  $server     An array of server parameters
      * @param string $content    The raw body data
      */
-    public function __construct($uri, $method, array $parameters = [], array $files = [], array $cookies = [], array $server = [], $content = null)
+    public function __construct(string $uri, string $method, array $parameters = [], array $files = [], array $cookies = [], array $server = [], string $content = null)
     {
         $this->uri = $uri;
         $this->method = $method;
+
+        array_walk_recursive($parameters, static function (&$value) {
+            $value = (string) $value;
+        });
+
         $this->parameters = $parameters;
         $this->files = $files;
         $this->cookies = $cookies;
