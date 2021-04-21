@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block title %}Homepage{% endblock %}
+{% block body_header %}
+    <header class="">
+        <nav class="log">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+{% block body_content %}
+    <div class="banner">
+        <div class="container">
+{#            <h2>Otestujte spolecnost</h2>#}
+            <div id="search-section">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+{#                <form id="suggestion_form" name="gs" method="get" action="#">#}
+{#                    <div class="searchText">#}
+{#                        <input type="text" name="q" class="searchText" placeholder="ICO spolecnosti..."#}
+{#                               autocomplete="on">#}
+{#                        <!--                <ul>-->#}
+{#                        <!--                    <li><label><input type="checkbox" name="ext_com"-->#}
+{#                        <!--                                      value="1"><span>Test jednatelu</span></label></li>-->#}
+{#                        <!--                    <li><label><input type="checkbox" name="ext_net"-->#}
+{#                        <!--                                      value="1"><span>Test subjektu</span></label></li>-->#}
+{#                        <!--                    <li><label><input type="checkbox" name="ext_org"-->#}
+{#                        <!--                                      value="1"><span>Test domeny</span></label></li>-->#}
+{#                        <!--                    <li><label><input type="checkbox" name="ext_org"-->#}
+{#                        <!--                                      value="1"><span>Bonusovy test</span></label></li>-->#}
+{#                        <!--                </ul>-->#}
+{#                    </div>#}
+{#                    <input type="submit" name="results" class="main-button" value="Search Now">#}
+{#                </form>#}
+                {% if err %}
+                <div class="not_found"><p>Spolecnost neexistuje</p></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <script>
+        const debounce = (fn) => {
+            let frame;
+            return (...params) => {
+                if (frame) {
+                    cancelAnimationFrame(frame);
+                }
+                frame = requestAnimationFrame(() => {
+
+                    fn(...params);
+                });
+
+            }
+        };
+        const storeScroll = () => {
+            document.documentElement.dataset.scroll = window.scrollY;
+        }
+        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+        storeScroll();
+    </script>
+{% endblock %}
