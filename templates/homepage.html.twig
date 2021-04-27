@@ -5,8 +5,13 @@
         <nav class="log">
             <div class="container">
                 <ul>
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#">Sign Up</a></li>
+                    {% if app.user %}
+                        <li><a href="{{ path('app_logout') }}">Log out</a></li>
+                        <li><a href="{{ path('history' , {"id": app.user.getId}) }}">Historie</a></li>
+                    {% else %}
+                        <li><a href="{{ path('app_login') }}">Log in</a></li>
+                        <li><a href="{{ path('account_create') }}">Vytvořit účet</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Entity;
-
 use App\Repository\FirmRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\ORM\Mapping\JoinColumn;
+use JMS\Serializer\Annotation as Serialize;
 
 /**
  * @ORM\Entity(repositoryClass=FirmRepository::class)
@@ -28,8 +29,8 @@ class Firm
      * @Assert\Length(
      *     min=6,
      *     max=8,
-     *     minMessage="ICO must be at least {{ limit }} characters long",
-     *     maxMessage="ICO cant be longer than {{ limit }} charakters"
+     *     minMessage="Délka IČO nesmí být kratší než {{ limit }} znaků",
+     *     maxMessage="Délka IČO nesmí být delší než {{ limit }} znaků"
      * )
      */
     private $ico;
@@ -73,6 +74,22 @@ class Firm
      * @ORM\JoinColumn(nullable=true)
      */
     private $test_domeny;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Account", inversedBy="firms")
+     * @ORM\JoinColumn(name="account_id", referencedColumnName="id")
+     */
+    private $account;
+
+    public function setAccount(Account $account)
+    {
+        $this->account = $account;
+    }
+
+    public function getAccount()
+    {
+        return $this->account;
+    }
 
     public function getId(): ?int
     {

@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+{% block title %}History{% endblock %}
+{% block body_header %}
+    <header class="">
+        <nav>
+            <div class="container">
+                <ul id="navi">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ path('home') }}">Domů</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+{% block body_content %}
+    <div class="header text">
+        <h1>Historie testování</h1>
+        <p>
+            <a href="{{ path('home') }}">Domů</a>
+            /
+            <span>{{ app.user.username }}</span>
+        </p>
+    </div>
+    {% if acc.getFirms is empty %}
+        <p id="hlaska">Tento účet nemá žádné uložené výsledky.</p>
+    {% else %}
+        <section class="pozice">
+            <h2>Testované firmy</h2>
+            <table class="positions">
+                <thead>
+                <tr>
+                    <th>Název firmy</th>
+                    <th>IČO firmy</th>
+                    <th>Výsledek</th>
+                    <th>Úplný výpis</th>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <th>Delete</th>
+                    {% endif %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for firm in acc.getFirms %}
+                    <tr>
+                        <td>{{ firm.getName }}</td>
+                        <td>{{ firm.getIco }}</td>
+                        <td>{{ firm.getResult }}%</td>
+                        {% if app.user %}
+                            <td><a href="{{ path('result_page', {'id': firm.getId}) }}">Zobrazit</a></td>
+                        {% else %}
+                            <td>Chcete-li vidět výsledek, musíte být přihlášeni!</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    {% endif %}
+    <script>
+        const debounce = (fn) => {
+            let frame;
+            return (...params) => {
+                if (frame) {
+                    cancelAnimationFrame(frame);
+                }
+                frame = requestAnimationFrame(() => {
+
+                    fn(...params);
+                });
+
+            }
+        };
+        const storeScroll = () => {
+            document.documentElement.dataset.scroll = window.scrollY;
+        }
+        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+        storeScroll();
+    </script>
+{% endblock %}

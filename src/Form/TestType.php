@@ -26,7 +26,7 @@ class TestType extends AbstractType
                     'Počet jednatelů' => 'pocet_jednatelu',
                 //     'Jine subjekty' => 'jine_subjekty',
                 //     'Insolvence' => 'insolvence',
-                    'Netypycky věk jednatelů' => 'atypycky_vek',
+                    'Netypický věk jednatelů' => 'atypycky_vek',
                 //     'Bydliste jednatelu' => 'bydliste'
                 ),
                 'expanded' => true,
@@ -34,7 +34,7 @@ class TestType extends AbstractType
                 'label' => 'Test jednatelů:',
                 'choice_attr' => [
                     'Počet jednatelů' => ['text' => 'Chcete zahrnout kontrolu počtu vlastníků do testování?'],
-                    'Netypycky věk jednatelů' => ['text' => 'Zahrnout do testování šek na nestandardní věk vlastníků?'],
+                    'Netypický věk jednatelů' => ['text' => 'Chcete do testování zahrnout ověření vlastníků pro nestandardní věk?'],
                 ],
 
             ))

@@ -15,12 +15,16 @@
 {% endblock %}
 {% block body_content %}
     <div class="header text">
-        <h1>Select group of tests</h1>
+        <h1>Volitelné testy</h1>
         <p>
-            <a href="{{ path('home') }}">Home</a>
+            <a href="{{ path('home') }}">Domů</a>
             /
-            <span>Forms</span>
+            <span>{{ firm.getName }}</span>
         </p>
+    </div>
+    <div class="about_mark">
+        <h2>Co dělat dál? </h2>
+        <p>Je důležité vědět, že níže uvedené testy jsou volitelné a můžete si nic nevybírat, protože hlavní testy jsou již načteny uvnitř programu. Níže je několik skupin testů, když umístíte kurzor nad nad výběrovým čtvercem, zobrazí se nápověda, která vysvětlí, o jaký test jde. Na konci uvidíte všechny provedené testy, včetně skrytých povinných.</p>
     </div>
     <div class="testbox">
         {{ form_start(form) }}

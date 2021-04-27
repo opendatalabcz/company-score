@@ -36,7 +36,7 @@ class HomepageController extends AbstractController
     {
         $firm = new Firm();
         $form = $this->createForm(FirmType::class, $firm)
-            ->add('submit', SubmitType::class, ['label' => 'Find'])
+            ->add('submit', SubmitType::class, ['label' => 'Hledat'])
             ->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $firm = $form->getData();

@@ -434,6 +434,7 @@ class FirmService
         $this->result_array['Pocet jinych subjektu'] = $pocet_jinych;
         $this->result_array['Pocet jinych subjektu v likvidaci'] = $pocet_v_lik;
     }
+
     public function bydleni_jednatelu()
     {
         foreach ($this->people as $man)
@@ -447,6 +448,8 @@ class FirmService
                 $first=array_pop($p);
                 $first=trim($first);
             }
+           // $first = preg_replace( '/\d[ *]\d/', '', $first);
+            $first = preg_replace('/(?<=\d)\s+(?=\d)/', '', $first);
             $search_url = "https://nominatim.openstreetmap.org/search?q=".str_replace(" ","+",$first)."&format=json";
             $httpOptions = [
                 "http" => [
@@ -471,6 +474,7 @@ class FirmService
                 $last_word=array_pop($p);
             }
             $last_word=trim($last_word);
+
             $real='';
             $base="https://en.wikipedia.org/wiki/List_of_alternative_country_names";
             $client=new Client();
@@ -510,6 +514,7 @@ class FirmService
                 $this->result_array['Bydleni mimo EU']="NE";
             }
         }
+
         if(empty($this->people))
             $this->result_array['Bydleni mimo EU']=null;
     }

@@ -19,14 +19,16 @@ class ResultController extends AbstractController
 {
 
     /**
-     * @Route("/{id}/result", methods={"GET"}, name="result_page")
+     * @Route("/result/{id}", methods={"GET"}, name="result_page")
      * @param $id
      * @return Response
      */
     public function result_action($id): Response
     {
         $em = $this->getDoctrine()->getManager();
-        $firm = $this->getDoctrine()->getRepository(Firm::class)->findOneBy(['id' => $id]);
+        $firm = $this->getDoctrine()->getRepository(Firm::class)->find($id);
+        if($firm === null)
+            return $this->render('404.html.twig',[]);
         $tables = [];
         array_push($tables, $this->get_table_zakldani($firm->getZakladniTestId()));
         if ($firm->getTestJednateluId() !== null)
@@ -246,13 +248,13 @@ class ResultController extends AbstractController
             ];
         if ($testJednatelu->getNetypyckyVekJednatele() !== null)
             $res['tests'][] = [
-                'name' => 'Netypycky věk',
+                'name' => 'Netypický věk',
                 'real' => $testJednatelu->getNetypyckyVekJednatele(),
                 'max' => 2
             ];
         if ($testJednatelu->getBydleniMimoEu() !== null)
             $res['tests'][] = [
-                'name' => 'Bydlení mimo EU',
+                'name' => 'Bydlení ve specifických zemích.',
                 'real' => $testJednatelu->getBydleniMimoEu(),
                 'max' => 2
             ];

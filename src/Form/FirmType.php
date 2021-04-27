@@ -19,9 +19,9 @@ class FirmType extends AbstractType
     {
         $builder
             ->add('ico', TextType::class, [
-                'label' => 'Otestujte spolecnost',
+                'label' => 'Otestujte společnost',
                 'attr' => array(
-                    'placeholder' => 'ICO spolecnosti...'
+                    'placeholder' => 'IČO společnosti...'
                 )
             ]);
     }

@@ -1,69 +1,80 @@
 {% extends 'base.html.twig' %}
 {% block title %}Result{% endblock %}
 {% block body_header %}
-<header class="">
-    <nav>
-        <div class="container">
-            <ul id="navi">
-                <li class="nav-item active"><a class="nav-link" href="{{ path('home') }}">Home</a></li>
-                <li class="nav-item active"><a class="nav-link" href="{{ path('forms_completing', {'id':firm.id}) }}">Forms</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    <header class="">
+        <nav>
+            <div class="container">
+                <ul id="navi">
+                    <li class="nav-item active"><a class="nav-link" href="{{ path('home') }}">Domů</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ path('forms_completing', {'id':firm.getId}) }}">Testy</a></li>
+                    {% if app.user %}
+                    <li class="nav-item active"><a class="nav-link" href="{{ path('history', {"id": app.user.getId}) }}">Historie</a></li>
+                    {% endif %}
+                    {% if app.user %}
+                        <li><a href="{{ path('app_logout') }}">Log out</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
 {% endblock %}
 {% block body_content %}
-<div class="header text">
-    <h1>{{ firm.name }}</h1>
-    <ul class="main-info">
-        <li>
-            <p>Sídlo</p>
-            <span>{{ firm.sidlo }}</span>
-        </li>
-        <li>
-            <p>Identifikační číslo</p>
-            <span>{{ firm.ico }}</span>
-        </li>
-    </ul>
-    <p class="procento">
-        <span class="pr">{{ procento }}%</span>
-        /
-        <span class="pr">100%</span>
-    </p>
-    <p class="procento">
-        <span>Hodnocení: </span>
-        <span class="bod">{{ zn }}</span>
-    </p>
-</div>
-<div class="test-result">
-    {%  for table in tables %}
-    <table>
-        <thead>
-        <tr>
-            <th>
-                {{ table.nazev }}
-            </th>
-            <th>
-                Score
-            </th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for row in table.tests %}
-        <tr>
-            <td>{{ row.name }}</td>
-            <td>{{ row.real }}/{{ row.max }}</td>
-        </tr>
+    <div class="header text">
+        <h1>{{ firm.name }}</h1>
+        <ul class="main-info">
+            <li>
+                <p>Sídlo</p>
+                <span>{{ firm.getSidlo }}</span>
+            </li>
+            <li>
+                <p>Identifikační číslo</p>
+                <span>{{ firm.getIco }}</span>
+            </li>
+        </ul>
+        <p class="procento">
+            <span class="pr">{{ procento }}%</span>
+            /
+            <span class="pr">100%</span>
+        </p>
+        <p class="procento">
+            <span>Hodnocení: </span>
+            <span class="bod">{{ zn }}</span>
+        </p>
+    </div>
+    <div class="test-result">
+        {% for table in tables %}
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        {{ table.nazev }}
+                    </th>
+                    <th>
+                        Score
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in table.tests %}
+                    <tr>
+                        <td>{{ row.name }}</td>
+                        <td>{{ row.real }}/{{ row.max }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
         {% endfor %}
-        </tbody>
-    </table>
-{% endfor %}
-</div>
-<div class="about_mark">
-    <h2>Co znamená výsledné hodnocení?</h2>
-    <p>{{ popis }}</p>
-    <a href="{{ link }}">Více informací o {{ firm.name }}?</a>
-</div>
+    </div>
+    <div class="about_mark">
+        <h2>Co znamená výsledné hodnocení?</h2>
+        <p>{{ popis }}</p>
+        <ul class="result_nav">
+            {%  if app.user %}
+            <li><a href="#" onclick="return updateAccount({{ app.user.getId }}, {{ firm.getId }});">Uložit</a></li>
+            {% endif %}
+            <li><a href="{{ link }}">Více informací o {{ firm.name }}?</a></li>
+        </ul>
+    </div>
     <script>
         // The debounce function receives our function as a parameter
         const debounce = (fn) => {
@@ -95,8 +106,32 @@
             document.documentElement.dataset.scroll = window.scrollY;
         }
         // Listen for new scroll events, here we debounce our `storeScroll` function
-        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+        document.addEventListener('scroll', debounce(storeScroll), {passive: true});
         // Update scroll position for first time
         storeScroll();
+    </script>
+    <script>
+        function updateAccount(idAcc,idFirm)
+        {
+            let json = JSON.stringify(idFirm);
+            let url='/api/account/'+idAcc;
+            let xhr = new XMLHttpRequest();
+            xhr.open('PUT', url);
+            xhr.setRequestHeader('Content-type','application/json');
+            xhr.send(json);
+            xhr.onload = function () {
+                if (xhr.status !== 200) {
+                    console.log('ERROR');
+                } else {
+                    console.log('UPDATED!');
+                    window.alert("Výsledek byl uložen!");
+                }
+            };
+            xhr.onerror = function () {
+                console.log('NO CONNECTION');
+            };
+
+            return false;
+        }
     </script>
 {% endblock %}

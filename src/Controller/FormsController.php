@@ -10,14 +10,13 @@ use App\Entity\TestDomeny;
 use App\Entity\TestJednatelu;
 use App\Entity\TestSubjektu;
 use App\Form\TestType;
-
 use App\Service\FirmService;
+use Doctrine\Common\Proxy\Exception\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
 
 use Whois;
 
@@ -36,7 +35,7 @@ class FormsController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/forms", methods={"GET","POST"}, name="forms_completing")
+     * @Route("/forms/{id}", methods={"GET","POST"}, name="forms_completing")
      * @param $id
      * @param Request $request
      * @return Response
@@ -45,9 +44,11 @@ class FormsController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $firm = $this->getDoctrine()->getRepository(Firm::class)->findOneBy(['id' => $id]);
+        if($firm === null)
+            return $this->render('404.html.twig',[]);
         $ico = $firm->getIco();
         $form = $this->createForm(TestType::class)
-            ->add('submit', SubmitType::class, ['label' => 'Test firm!',
+            ->add('submit', SubmitType::class, ['label' => 'Otestovat!',
                 'attr' => ['onclick' => 'MyClick()']])
             ->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -58,25 +59,42 @@ class FormsController extends AbstractController
             $test_jednatelu[] = 'jine_subjekty';
             $test_jednatelu[] = 'insolvence';
             $test_jednatelu[] = 'bydliste';
-            $this->test_jednatelu($ico, $test_jednatelu, $firm->getId());
+            try {
+                $this->test_jednatelu($ico, $test_jednatelu, $firm->getId());
+            } catch (\InvalidArgumentException  $e) {
+                return $this->render("500.html.twig", array());
+            }
             //-------------------------------------------------------//
             $firm->setTestSubjektuId(null);
             $test_subjektu = $tests['test_subjektu'];
             $test_subjektu[] = 'pocet_zamestnancu';
             $test_subjektu[] = 'dph';
             $test_subjektu[] = 'pocet_let_na_trhu';
-            $this->test_subjektu($ico, $test_subjektu, $firm->getId());
+            try {
+                $this->test_subjektu($ico, $test_subjektu, $firm->getId());
+            } catch (\InvalidArgumentException  $e) {
+                return $this->render("500.html.twig", array());
+            }
             //-------------------------------------------------------//
             $firm->setTestDomenyId(null);
             $test_domeny = $tests['test_domeny'];
             $test_domeny[] = 'existence';
             $test_domeny[] = 'pocet_let_v_provozu';
-            $this->test_domeny($ico, $test_domeny, $firm->getId());
+            try {
+                $this->test_domeny($ico, $test_domeny, $firm->getId());
+            } catch (\InvalidArgumentException  $e) {
+                return $this->render("500.html.twig", array());
+            }
             //-------------------------------------------------------//
             $firm->setBonusovyTestId(null);
             $test_bonusovy = $tests['test_bonusovy'];
-            if (!empty($test_bonusovy))
-                $this->test_bonusovy($ico, $test_bonusovy, $firm->getId());
+            if (!empty($test_bonusovy)) {
+                try {
+                    $this->test_bonusovy($ico, $test_bonusovy, $firm->getId());
+                } catch (\InvalidArgumentException  $e) {
+                    return $this->render("500.html.twig", array());
+                }
+            }
             $em->flush();
 
             return $this->redirectToRoute('result_page', [
@@ -85,7 +103,7 @@ class FormsController extends AbstractController
         }
         return $this->render('forms.html.twig', array(
             'form' => $form->createView(),
-
+            'firm' => $firm,
         ));
     }
 
