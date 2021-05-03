@@ -481,7 +481,7 @@ html:not([data-scroll="0"]) nav > div.container > ul[id="navi"] > li:not([class=
 
 .about_mark {
     width: 1140px;
-    margin-left: 15rem;
+    margin-left: 15%;
     margin-bottom: 3rem;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
@@ -656,9 +656,9 @@ html:not([data-scroll='0']) nav > div.container > ul:not([id="navi"]) > li > a {
 }
 
 
-body  >form {
+body > form{
     margin: 5rem 20rem;
-    padding-left: 15rem;
+    padding-left: 10%;
     padding-top: 2rem;
     padding-bottom: 2rem;
     color: #585858;

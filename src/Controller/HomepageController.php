@@ -41,15 +41,19 @@ class HomepageController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $firm = $form->getData();
             $ico = $firm->getIco();
+            try{
             $firm = $this->firmService->createFirm($ico);
+            } catch (\InvalidArgumentException  $e) {
+                return $this->render("500.html.twig", array());
+            }
             if ($firm !== null) {
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($firm);
                 $entityManager->flush();
                 $firm = $this->zakladni_test($firm->getId());
                 if ($firm->getZakladniTestId()->getResult() === 0)
-                    return $this->redirectToRoute('result_page',[
-                        'id'=>$firm->getId()
+                    return $this->redirectToRoute('result_page', [
+                        'id' => $firm->getId()
                     ]);
                 return $this->redirectToRoute('forms_completing', [
                     'id' => $firm->getId(),

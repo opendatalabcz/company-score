@@ -79,14 +79,6 @@ class FirmVoter extends Voter
     {
         // this assumes that the data object has a getOwner() method
         // to get the entity of the user who owns this data object
-
-//        foreach ($account->getFirms() as $a){
-//            if ($firm->getId() === $a->getId()){
-//                return true;
-//            }
-//        }
-//        if($firm->getAccount() === null)
-//            return true;
         if($firm === $account->getId())
             return true;
         return false;

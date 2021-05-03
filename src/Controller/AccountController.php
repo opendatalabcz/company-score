@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Entity\Account;
 use App\Entity\Firm;
 use App\Form\AccountType;
+use App\Form\SaveType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Exception\AccessException;
 use Symfony\Component\HttpFoundation\Request;
@@ -61,13 +62,10 @@ class AccountController extends AbstractController
      */
     public function getHistory($id): Response
     {
-        $account = $this->getDoctrine()->getRepository(Account::class)->find($id);
+        $account = $this->getDoctrine()->getRepository(Account::class)->find(intval($id));
         if($account === null)
             return $this->render('404.html.twig',[]);
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
-        $firm = $this->getDoctrine()->getRepository(Firm::class)->findOneBy(['account'=>$id]);
-        if($firm===null)
-            $firm = new Firm();
         try {
             $this->denyAccessUnlessGranted('edit', intval($id));
         } catch (\Exception $exception) {
@@ -76,5 +74,50 @@ class AccountController extends AbstractController
 
         return $this->render("historyAccount.html.twig",['acc'=>$account]);
     }
+
+
+    /**
+     * @Route("/{id}/save/{idFirm}", methods={"GET","POST"}, name="save_result")
+     * @param $idFirm
+     * @param $id
+     * @param Request $request
+     * @return Response
+     */
+    public function save_result($idFirm,$id,Request $request): Response
+    {
+        $em = $this->getDoctrine()->getManager();
+        $account = $em->find(Account::class, intval($id));
+        $firm = $em->find(Firm::class, intval($idFirm));
+        if($firm === null || $account ===  null)
+            return $this->render('404.html.twig',[]);
+
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        try {
+            $this->denyAccessUnlessGranted('edit', intval($id));
+        } catch (\Exception $exception) {
+            return  $this->render("403.html.twig",[]);
+        }
+
+        $form = $this->createForm(SaveType::class)
+            ->add('submit', SubmitType::class, ['label' => 'Uložit'])
+            ->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $res = $form->getData();
+            if($res['saveChoise'])
+            {
+                $firm->setAccount($account);
+                $em->flush();
+                $this->addFlash('success', 'Account was successfully updated');
+            }
+            return $this->redirectToRoute('result_page',[
+                'id' => $firm->getId(),
+            ]);
+        }
+        return $this->render("resultSafe.html.twig", ['account' => $account,
+            'form' => $form->createView()]);
+    }
+
+
 
 }

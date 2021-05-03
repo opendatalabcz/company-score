@@ -3,13 +3,16 @@
 
 namespace App\Controller;
 
+use App\Entity\Account;
 use App\Entity\BonusovyTest;
 use App\Entity\Firm;
 use App\Entity\TestDomeny;
 use App\Entity\TestSubjektu;
 use App\Entity\ZakladniTest;
 use App\Entity\TestJednatelu;
+use App\Form\SaveType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,6 +20,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ResultController extends AbstractController
 {
+
 
     /**
      * @Route("/result/{id}", methods={"GET"}, name="result_page")

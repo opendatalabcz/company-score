@@ -70,7 +70,7 @@
         <p>{{ popis }}</p>
         <ul class="result_nav">
             {%  if app.user %}
-            <li><a href="#" onclick="return updateAccount({{ app.user.getId }}, {{ firm.getId }});">Uložit</a></li>
+            <li><a href="{{ path("save_result", {'id':app.user.getId,'idFirm':firm.getId}) }}" onclick="return updateAccount({{ app.user.getId }}, {{ firm.getId }});">Uložit</a></li>
             {% endif %}
             <li><a href="{{ link }}">Více informací o {{ firm.name }}?</a></li>
         </ul>
