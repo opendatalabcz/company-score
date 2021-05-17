@@ -258,7 +258,7 @@ class ResultController extends AbstractController
             ];
         if ($testJednatelu->getBydleniMimoEu() !== null)
             $res['tests'][] = [
-                'name' => 'Bydlení ve specifických zemích.',
+                'name' => 'Bydlení ve specifických zemích',
                 'real' => $testJednatelu->getBydleniMimoEu(),
                 'max' => 2
             ];
