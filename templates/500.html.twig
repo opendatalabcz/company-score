@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}Error 500{% endblock %}
+{% block body_content %}
+    <div class="wrapper">
+        <div class="box">
+            <h1>500</h1>
+            <p>Byl překročen počet požadavků nebo registr není k dispozici.</p>
+            <p>&#58;&#40;</p>
+            <p><a href="{{ path('home') }}">Zkuste to znovu za pár minut</a></p>
+        </div>
+    </div>
+{% endblock %}

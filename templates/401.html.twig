@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% set title = 'Unauthorized!' %}
+
+{% block content %}
+    <h1>Error 401</h1>
+    {% if errmess is defined %}
+        {{ errmess }}
+    {% else %}
+        Unauthorized.
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+{% block title %}Select tests{% endblock %}
+{% block body_header %}
+    <header class="">
+        <nav>
+            <div class="container">
+                <ul id="navi">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ path('home') }}">Domů</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+{% block body_content %}
+    <div class="header text">
+        <h1>Volitelné testy</h1>
+        <p>
+            <a href="{{ path('home') }}">Domů</a>
+            /
+            <span>{{ firm.getName }}</span>
+        </p>
+    </div>
+    <div class="about_mark">
+        <h2>Co dělat dál? </h2>
+        <p>Je důležité vědět, že níže uvedené testy jsou volitelné a můžete si nic nevybírat, protože hlavní testy jsou již načteny uvnitř programu. Níže je několik skupin testů, když umístíte kurzor nad nad výběrovým čtvercem, zobrazí se nápověda, která vysvětlí, o jaký test jde. Na konci uvidíte všechny provedené testy, včetně skrytých povinných.</p>
+    </div>
+    <div class="testbox">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+        {# <form action="/" method="get"> #}
+        {# <div class="item status"> #}
+        {# <p>Test jednatelu:</p> #}
+        {# <div class="test-item"> #}
+        {# <label><input type="checkbox" name="test"> <span>Pocet jednatelu</span></label> #}
+        {# <label><input type="checkbox" name="test"> <span>Jine subjekty</span></label> #}
+        {# <label><input type="checkbox" name="test"> <span>Insolvence</span></label> #}
+        {# <label><input type="checkbox" name="test"> <span>Atypicky vek jednatelu</span></label> #}
+        {# <label><input type="checkbox" name="test" checked > <span>Bydliste jednatelu</span></label> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div class="btn-block"> #}
+        {# <button type="submit">Test firm!</button> #}
+        {# </div> #}
+        {# </form> #}
+    </div>
+    <div id="loading"></div>
+    <script>
+        (function () {
+            const ttBox = document.createElement("div");
+// set style
+            ttBox.id = "tooltip";
+            ttBox.style.visibility = "hidden"; // make it hidden till mouse over
+            ttBox.style.position = "fixed";
+            ttBox.style.top = "0.5rem";
+            ttBox.style.left = "0.5rem";
+            ttBox.style.padding = "0.5rem";
+            ttBox.style.width = "30rem";
+            ttBox.style.borderRadius = "1rem";
+            ttBox.style.border = "solid thin gray";
+            ttBox.style.backgroundColor = "lightgrey";
+// insert into DOM
+            document.body.appendChild(ttBox);
+
+            function createTip(ev) {
+                const boundBox = ev.target.getBoundingClientRect();
+                const coordX = boundBox.left;
+                const coordY = boundBox.top;
+                // adjust bubble position
+                ttBox.style.left = (coordX + 40).toString() + "px";
+                ttBox.style.top = (coordY + 40).toString() + "px";
+                ttBox.innerHTML= this.getAttribute("text");
+                ttBox.style.visibility = "visible";
+            }
+
+            function cancelTip(ev) {
+                ttBox.style.visibility = "hidden";
+            }
+            let links = document.querySelectorAll("div#test > div > div > input");
+            for (let i = 0; i < links.length; i++) {
+                let a = links[i];
+                if (a.text !== '') {
+                    a.addEventListener('mouseover', createTip, false);
+                    a.addEventListener('mouseout', cancelTip, false);
+                    document.getElementById("tooltip").addEventListener("click", cancelTip , false);
+                }
+                  //console.log(a);
+            }
+
+        })();
+    </script>
+    <script>
+        function  MyClick()
+        {
+           let spinner = document.getElementById('loading');
+           spinner.classList.add('active');
+        }
+    </script>
+    <script>
+        const debounce = (fn) => {
+            let frame;
+            return (...params) => {
+                if (frame) {
+                    cancelAnimationFrame(frame);
+                }
+                frame = requestAnimationFrame(() => {
+
+                    fn(...params);
+                });
+
+            }
+        };
+        const storeScroll = () => {
+            document.documentElement.dataset.scroll = window.scrollY;
+        }
+        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+        storeScroll();
+    </script>
+{% endblock %}

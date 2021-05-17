@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}Creating new account{% endblock %}
+  {% block body_header %}
+      <header class="action_form">
+          <nav class="line">
+              <ul>
+                  <li>Creation of a new account</li>
+              </ul>
+          </nav>
+      </header>
+  {% endblock %}
+{% block body_content %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

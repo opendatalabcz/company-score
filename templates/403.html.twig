@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Forbidden!{% endblock %}
+{% block body_content%}
+    <body class="error">
+    <div class="mainbox">
+        <div class="err">403</div>
+        <div class="msg">Access not granted!<p>Let's go <a href="{{ path('home') }}">home</a> and try from there.</p></div>
+    </div>
+    </body>
+{% endblock %}
